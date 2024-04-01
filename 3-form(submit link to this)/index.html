@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fortify Position</title>
+</head>
+<body>
+    <header><span class="checkout">Checkout</span><span class="price">$1,000,000</span></header>
+    <h1>Where should we send your order?</h1>
+    <form>
+        <h2>Enter your name and address:</h2>
+        <input class="main" type="text" placeholder="First Name">
+        <input class="main" type="text" placeholder="Last Name">
+        <input class="main" type="text" placeholder="Street Address">
+        <input class="main" type="text" placeholder="Apt, Suite, Building (Optional)">
+        <input class="main" type="text" placeholder="Zip Code">
+        <input class="main" type="text" placeholder="City, State">
+        <input class="main" type="text" placeholder="Country/Region">
+        <input class="main checkbox" type="checkbox"> <p class="business">This is a business address.</p>
+        <input class="company-name" type="text" placeholder="Company Name (Optional)">
+        <h2 class="contact">What's Your contact information?</h2>
+        <input class="contact-info" type="text" placeholder="Email Address">
+        <p class="contact-description">We’ll email you a receipt and send order updates to your mobile phone via SMS or iMessage.</p>
+        <input class="contact-info" type="text" placeholder="Phone Number">
+        <p class="contact-description phone-info">The phone number you enter can’t be changed after you place your order, so please make sure it’s correct.</p>
+        <p class="sharing-header">Share shipping updates with someone else:</p>
+        <p class="sharing-button">Enter an email address</p>
+        <input class="contact-info" id="sharing-input" type="text" placeholder="Email Address (optional)">
+        <p class="contact-description sharing-info">Shipping notifications will be sent to the email address you enter.</p>
+        <div class="divider"></div>
+        <div class="payup">Continue to Payment</div>
+    </form>
+</body>
+<script>
+let checkbox = document.querySelector(".checkbox");
+let businessInput = document.querySelector(".company-name");
+checkbox.addEventListener("click", () => {
+    if(checkbox.checked)
+        businessInput.style.display = "inline-block";
+    else{
+        businessInput.style.display = "none";
+    }
+});
+
+let sharingButton = document.querySelector(".sharing-button");
+let sharingEmail = document.getElementById("sharing-input");
+let sharingInfo = document.querySelector(".sharing-info");
+sharingButton.addEventListener("click", () => {
+    sharingButton.style.display = "none";
+    sharingEmail.style.display = "inline-block";
+    sharingInfo.style.display = "block";
+})
+</script>
+</html>

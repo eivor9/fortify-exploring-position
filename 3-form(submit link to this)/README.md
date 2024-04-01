@@ -25,7 +25,7 @@ After designing your form, follow these steps to publish it on GitHub Pages:
 Once your form is published on GitHub Pages, edit this README file to include the link to your hosted form. Example:
 
 ```
-[Link to My Form](https://username.github.io/repository-name)
+[Link to My Form]https://eivor9.github.io/exploring-position-submission/
 ```
 
 This will allow others to access and view your form directly.
